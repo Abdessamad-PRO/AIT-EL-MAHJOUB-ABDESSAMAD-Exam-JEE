@@ -60,9 +60,6 @@ public class LocationMapperImpl {
             if (location == null) return null;
             LocationDTO locationDTO = new LocationDTO();
             BeanUtils.copyProperties(location, locationDTO);
-            if (location.getVehicule() != null) {
-                locationDTO.setVehicule(fromVehicule(location.getVehicule()));
-            }
             return locationDTO;
         }
 
